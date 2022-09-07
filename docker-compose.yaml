@@ -6,6 +6,7 @@ services:
     ports:
       - "80:80"
     depends_on:
-- db db:
+      - db
+  db:
     container_name: db
     image: subkhanave/sosmed-db:${GIT_COMMIT_SHORT}
